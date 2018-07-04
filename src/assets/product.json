@@ -1,0 +1,43 @@
+{
+  "product":
+  {
+    "electronic":
+    [
+      {"name":"Iphone","price":"Rs20,000","Description":"Iphone X , 64 GB"},
+      {"name":"Redmi 5 pro","price":"Rs30,000","Description":"Redmi 5 pro , 64 GB"},
+      {"name":"Samsung","price":"Rs60,000","Description":"Samsung S8 , 64 GB"},
+      {"name":"Iphone X","price":"Rs60,000","Description":"Iphone X , 64 GB"},
+      {"name":"Iphone","price":"Rs20000","Description":"Iphone X , 64 GB"},
+      {"name":"Iphone","price":"Rs20000","Description":"Iphone X , 64 GB"},
+      {"name":"Iphone","price":"Rs20000","Description":"Iphone 5s, 32 GB "}
+
+    ],
+    "fashion":
+    [
+      {"name":"fashion1","price":"Rs800","Description":"Description of fashion1"},
+      {"name":"fashion2","price":"Rs900","Description":"Description of fashion2"},
+      {"name":"fashion3","price":"Rs200","Description":"Description of fashion3"},
+      {"name":"fashion4","price":"Rs900","Description":"Description of fashion4"},
+      {"name":"fashion5","price":"Rs700","Description":"Description of fashion5"},
+      {"name":"fashion6","price":"Rs300","Description":"Description of fashion6"}
+    ],
+    "book":
+    [
+      {"name":"book1","price":"Rs100","Description":"Description of book1"},
+      {"name":"book2","price":"Rs150","Description":"Description of book2"},
+      {"name":"book3","price":"Rs200","Description":"Description of book3"},
+      {"name":"book4","price":"Rs300","Description":"Description of book4"},
+      {"name":"book5","price":"Rs400","Description":"Description of book5"},
+      {"name":"book6","price":"Rs500","Description":"Description of book6"}
+    ],
+    "watch":
+    [
+      {"name":"watch1","price":"Rs25000","Description":"Description of watch1"},
+      {"name":"watch2","price":"Rs9009","Description":"Description of watch2"},
+      {"name":"watch3","price":"Rs2007","Description":"Description of watch3"},
+      {"name":"watch4","price":"Rs9006","Description":"Description of watch4"},
+      {"name":"watch5","price":"Rs7006","Description":"Description of watch5"},
+      {"name":"watch6","price":"Rs3003","Description":"Description of watch6"}
+    ]
+  }
+}

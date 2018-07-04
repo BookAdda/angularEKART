@@ -1,0 +1,112 @@
+
+<div class="container">
+  <div id="electronics" class="cards" >
+    <div class="top-card">
+      <span class="heading-card"> Electronics</span>
+      <a routerLink="../electronics"> <button type="button" class="btn btn-primary btn-lg btn-card" id="electronicsViewAll">View All</button> </a>
+    </div>
+    <div class="row">
+        <div *ngFor="let edata of electronicsData;">
+        <div class="col-sm-3">
+          <img class="img-card electronics-img" src="{{edata.link}}" >
+          <div class="itemtxt-cards">
+            <div class="name-itemtxt-cards"> {{edata.name}} </div>
+            <div class="price-itemtxt-cards"> &#8377;{{edata.price}}</div>
+
+          </div>
+          </div>
+        </div>
+
+
+    </div>
+  </div>
+
+
+
+
+</div>
+
+
+<div class="container">
+  <div id="fashion" class="cards" >
+    <div class="top-card">
+      <span class="heading-card"> Fashion</span>
+      <a routerLink="../fashion"> <button type="button" class="btn btn-primary btn-lg btn-card" id="fashionViewAll" >View All</button> </a>
+    </div>
+    <div class="row">
+      <div *ngFor="let fdata of fashionData;">
+        <div class="col-sm-3">
+          <img class="img-card electronics-img" src="{{fdata.link}}" >
+          <div class="itemtxt-cards">
+            <div class="name-itemtxt-cards"> {{fdata.name}} </div>
+            <div class="price-itemtxt-cards"> &#8377;{{fdata.price}}</div>
+
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+
+
+
+
+</div>
+
+
+<div class="container">
+  <div id="watches" class="cards" >
+    <div class="top-card">
+      <span class="heading-card"> Watches</span>
+      <a routerLink="../watches"> <button type="button" class="btn btn-primary btn-lg btn-card" id="watchesViewAll">View All</button> </a>
+    </div>
+    <div class="row">
+      <div *ngFor="let wdata of watchesData;">
+        <div class="col-sm-3">
+          <img class="img-card electronics-img" src="{{wdata.link}}" >
+          <div class="itemtxt-cards">
+            <div class="name-itemtxt-cards"> {{wdata.name}} </div>
+            <div class="price-itemtxt-cards"> &#8377;{{wdata.price}}</div>
+
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+
+
+
+
+</div>
+
+
+<div class="container">
+  <div id="books" class="cards" >
+    <div class="top-card">
+      <span class="heading-card"> Books</span>
+      <a routerLink="../books"> <button type="button" class="btn btn-primary btn-lg btn-card" id="booksViewAll">View All</button> </a>
+    </div>
+    <div class="row">
+      <div *ngFor="let bdata of booksData;">
+        <div class="col-sm-3">
+          <img class="img-card electronics-img" src="{{bdata.link}}" >
+          <div class="itemtxt-cards">
+            <div class="name-itemtxt-cards"> {{bdata.name}} </div>
+            <div class="price-itemtxt-cards"> &#8377;{{bdata.price}}</div>
+
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+
+
+
+
+</div>
+

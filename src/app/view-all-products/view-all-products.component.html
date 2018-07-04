@@ -1,0 +1,17 @@
+
+<div class="row" style="margin-top: 100px;">
+<div  *ngFor="let dataView of viewAllProductArray;">
+<div class="col-md-3 col-md-offset-1 col-sm-8 col-sm-offset-1">
+<div class="view-all-div">
+  <img src="{{dataView.link}}" class="img-view-all-product">
+
+  <br>
+  <h4 style="margin-left: 40px;">{{dataView.name}}</h4>
+  <h4 style="margin-left: 40px;">Rs.{{dataView.price}}</h4>
+  <button class="btn btn-success" id="{{dataView.id}}" (click)="btnClicked(dataView.id)">Buy Now</button> &nbsp; <button  class="btn btn-primary">Look</button>
+
+</div>
+</div>
+
+</div>
+</div>

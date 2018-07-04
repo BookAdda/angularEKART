@@ -1,0 +1,28 @@
+<div class="row" style="margin-top: 30px;" *ngFor="let data of cartItem">
+
+  <div class="col-md-2 col-md-offset-2" style="height: 160px;">
+    <img src="{{data.link}}" class="cart-img">
+  </div>
+
+  <div class="col-md-3">
+
+    <p class="text-cart">Rs. {{data.price }}</p>
+    <p class="text-cart">{{data.description}} </p>
+  </div>
+
+
+  <div class="col-md-2">
+
+  </div>
+
+  <div class="col-md-2 col-md-offset-1">
+    <button class="btn btn-danger" id="{{data.id}}" (click)="deleteFromArray(data.id)">Delete</button>
+  </div>
+
+</div>
+
+<div class="row" style="margin-top: 30px;height: 70px;">
+
+
+
+  </div>
