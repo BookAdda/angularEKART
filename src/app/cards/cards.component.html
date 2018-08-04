@@ -1,109 +1,98 @@
 
+
 <div class="container">
-  <div id="electronics" class="cards" >
-    <div class="top-card">
-      <span class="heading-card"> Electronics</span>
-      <a routerLink="../electronics"> <button type="button" class="btn btn-primary btn-lg btn-card" id="electronicsViewAll">View All</button> </a>
-    </div>
-    <div class="row">
-        <div *ngFor="let edata of electronicsData;">
-        <div class="col-sm-3">
-          <img class="img-card electronics-img" src="{{edata.link}}" >
-          <div class="itemtxt-cards">
-            <div class="name-itemtxt-cards"> {{edata.name}} </div>
-            <div class="price-itemtxt-cards"> &#8377;{{edata.price}}</div>
 
-          </div>
-          </div>
-        </div>
+  <div class="row">
+    <div class="col-md-12">
 
-
+      <h2>Electronics   &nbsp;    <a routerLink="../electronics"> <button type="button" class="btn btn-primary">View All</button> </a>
+      </h2>
     </div>
   </div>
 
 
+  <div class="row">
+    <div *ngFor="let edata of electronicsData;">
+      <a [routerLink]="['../','electronics',edata._id]">
 
-
+      <div class="col-md-3 itemCard" >
+      <img class="imgCard" src="{{edata.imgLink}}" >
+<h4>{{edata.name}}</h4>
+      <h4>Rs:{{edata.price}}</h4>
+    </div>
+      </a>
+    </div>
 </div>
 
 
-<div class="container">
-  <div id="fashion" class="cards" >
-    <div class="top-card">
-      <span class="heading-card"> Fashion</span>
-      <a routerLink="../fashion"> <button type="button" class="btn btn-primary btn-lg btn-card" id="fashionViewAll" >View All</button> </a>
-    </div>
-    <div class="row">
-      <div *ngFor="let fdata of fashionData;">
-        <div class="col-sm-3">
-          <img class="img-card electronics-img" src="{{fdata.link}}" >
-          <div class="itemtxt-cards">
-            <div class="name-itemtxt-cards"> {{fdata.name}} </div>
-            <div class="price-itemtxt-cards"> &#8377;{{fdata.price}}</div>
+  <div class="row" style="margin-top: 50px;">
+    <div class="col-md-12">
 
-          </div>
-        </div>
-      </div>
-
-
+      <h2>Fashion &nbsp;       <a routerLink="../fashion"> <button type="button" class="btn btn-primary">View All</button> </a>
+      </h2>
     </div>
   </div>
 
 
+  <div class="row" >
+    <div *ngFor="let fdata of fashionData;">
+    <a [routerLink]="['../','fashion',fdata._id]">
 
-
-</div>
-
-
-<div class="container">
-  <div id="watches" class="cards" >
-    <div class="top-card">
-      <span class="heading-card"> Watches</span>
-      <a routerLink="../watches"> <button type="button" class="btn btn-primary btn-lg btn-card" id="watchesViewAll">View All</button> </a>
+    <div class="col-md-3 itemCard" >
+      <img class="imgCard" src="{{fdata.imgLink}}" >
+      <h4>{{fdata.name}}</h4>
+      <h4>Rs:{{fdata.price}}</h4>
     </div>
-    <div class="row">
-      <div *ngFor="let wdata of watchesData;">
-        <div class="col-sm-3">
-          <img class="img-card electronics-img" src="{{wdata.link}}" >
-          <div class="itemtxt-cards">
-            <div class="name-itemtxt-cards"> {{wdata.name}} </div>
-            <div class="price-itemtxt-cards"> &#8377;{{wdata.price}}</div>
-
-          </div>
-        </div>
-      </div>
-
-
-    </div>
+    </a>
+  </div>
   </div>
 
 
 
+  <div class="row"  style="margin-top: 50px;">
+    <div class="col-md-12">
 
-</div>
-
-
-<div class="container">
-  <div id="books" class="cards" >
-    <div class="top-card">
-      <span class="heading-card"> Books</span>
-      <a routerLink="../books"> <button type="button" class="btn btn-primary btn-lg btn-card" id="booksViewAll">View All</button> </a>
-    </div>
-    <div class="row">
-      <div *ngFor="let bdata of booksData;">
-        <div class="col-sm-3">
-          <img class="img-card electronics-img" src="{{bdata.link}}" >
-          <div class="itemtxt-cards">
-            <div class="name-itemtxt-cards"> {{bdata.name}} </div>
-            <div class="price-itemtxt-cards"> &#8377;{{bdata.price}}</div>
-
-          </div>
-        </div>
-      </div>
-
-
+      <h2>Books      <a routerLink="../books"> <button type="button" class="btn btn-primary">View All</button> </a>
+      </h2>
     </div>
   </div>
+
+
+  <div class="row">
+    <div *ngFor="let bdata of booksData;">
+      <a [routerLink]="['../','books',bdata._id]">
+
+      <div class="col-md-3 itemCard">
+      <img class="imgCard" src="{{bdata.imgLink}}" >
+      <h4>{{bdata.name}}</h4>
+      <h4>{{bdata.price}}</h4>
+    </div>
+      </a>
+  </div>
+  </div>
+
+
+  <div class="row" style="margin-top: 50px;">
+    <div class="col-md-12">
+
+      <h2>Watches       <a routerLink="../watches"> <button type="button" class="btn btn-primary">View All</button> </a>
+      </h2>
+    </div>
+  </div>
+
+
+  <div class="row">
+    <div *ngFor="let wdata of watchesData;">
+      <a [routerLink]="['../','watches',wdata._id]">
+    <div class="col-md-3 itemCard">
+      <img class="imgCard" src="{{wdata.imgLink}}" >
+      <h4>{{wdata.name}}</h4>
+      <h4>{{wdata.price}}</h4>
+    </div>
+      </a>
+  </div>
+  </div>
+
 
 
 

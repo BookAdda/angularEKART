@@ -9,6 +9,11 @@ import { ViewAllProductsComponent } from './view-all-products/view-all-products.
 import { CartComponent } from './cart/cart.component';
 import {DataTravelService} from './data-travel.service';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { AdminComponent } from './admin/admin.component';
+import { ViewSingleItemComponent } from './view-single-item/view-single-item.component';
+import { HttpClientModule} from '@angular/common/http';
+import { NgxSpinnerModule } from 'ngx-spinner';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 @NgModule({
   declarations: [
@@ -18,14 +23,18 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     ViewAllProductsComponent,
     CartComponent,
     PageNotFoundComponent,
-  ],
+    AdminComponent,
+    ViewSingleItemComponent
+],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    NgxSpinnerModule,
+    NgxPaginationModule
 
   ],
-  providers: [DataTravelService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

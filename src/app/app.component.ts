@@ -8,5 +8,8 @@ import {DataTravelService} from './data-travel.service';
 })
 export class AppComponent {
   title = 'app';
-  constructor(private myService: DataTravelService) {}
-}
+  constructor(private myService: DataTravelService) {
+
+    }
+  }
+

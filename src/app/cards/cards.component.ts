@@ -1,8 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {arrayOfData} from '../mockData';
-import {arrayOfData1} from '../mockData';
-import {arrayOfData2} from '../mockData';
-import {arrayOfData3} from '../mockData';
+import {HttpClient} from '@angular/common/http';
 
 @Component({
   selector: 'app-cards',
@@ -13,16 +10,29 @@ import {arrayOfData3} from '../mockData';
 
 
 export class CardsComponent implements OnInit {
-  electronicsData = arrayOfData.slice( 0, 4 ) ;
-  fashionData = arrayOfData1.slice( 0, 4 ) ;
-  watchesData = arrayOfData2.slice( 0, 4 ) ;
-  booksData = arrayOfData3.slice( 0, 4 ) ;
+  viewAllCardArray = [];
 
-  constructor() {
+  constructor(private httpClient: HttpClient) {
 
   }
 
+  electronicsData = [];
+  fashionData = [];
+  watchesData = [];
+  booksData = [];
 
-  ngOnInit() {}
+
+  ngOnInit() {
+    this.httpClient.get('http://localhost:3000/api/mainPageData').subscribe((data) => {
+      console.log(data);
+      this.viewAllCardArray = Object.keys(data).map(function (key) {
+        return data[key];
+      });
+      this.electronicsData = this.viewAllCardArray.slice(0, 4);
+      this.fashionData = this.viewAllCardArray.slice(4, 8);
+      this.watchesData = this.viewAllCardArray.slice(8, 12);
+      this.booksData = this.viewAllCardArray.slice(12, 16);
+    });
+  }
 }
 

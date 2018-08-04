@@ -5,91 +5,115 @@
 
 <body>
 
-<div class="container-fluid">
-  <nav class="navbar navbar-default navbar-fixed-top" style="height: 80px;">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <a routerLink="/home"> <img src="../../assets/images/gemini.jpeg" class="company-logo"></a>
-      </div>
-      <div class="nav navbar-nav navbar-right ">
-        <a routerLink="./cart"><h3><span class="glyphicon glyphicon-shopping-cart"></span>Cart</h3></a>&nbsp;&nbsp;&nbsp;
-      </div>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" routerLink="../home">PeroCart</a>
     </div>
-  </nav>
-  <div class="row middle-page">
-    <div class="col-sm-2 left-bar">
-      <ul class="list-group">
-        <li class="list-group-item"><a routerLink="../electronics">Electronics</a></li>
-        <li class="list-group-item"><a routerLink="../fashion">Fashion</a></li>
-        <li class="list-group-item"><a routerLink="../watches">Watches</a></li>
-        <li class="list-group-item"><a routerLink="../books">Books</a></li>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a routerLink="../home">Home</a></li>
+        <li><a routerLink="../electronics">Electronics</a></li>
+        <li><a routerLink="../fashion">Fashion</a></li>
+
+        <li><a routerLink="../watches">Watches</a></li>
+        <li><a routerLink="../books">Books</a></li>
+
+        <li><a routerLink="../cart">Cart</a></li>
+
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a routerLink="../admin">Admin</a></li>
       </ul>
     </div>
-    <div class="col-sm-10">
-      <div id="myCarousel" class="carousel slide" data-ride="carousel">
-        <!-- Indicators -->
-        <ol class="carousel-indicators">
-          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-          <li data-target="#myCarousel" data-slide-to="1"></li>
-        </ol>
+  </div>
+</nav>
 
-        <!-- Wrapper for slides -->
-        <div class="carousel-inner image-car">
-          <div class="item active">
-            <img src="../../assets/images/car1.jpg" alt="car1">
-          </div>
 
-          <div class="item">
-            <img src="../../assets/images/car2.jpg" alt="car2">
-          </div>
-        </div>
-      </div>
+
+<div class="container">
+
+
+
+
+  <div class="row">
+
+    <div class="col-sm-10 col-xs-12 col-md-12" style="margin-top: 100px;">
+
+            <img src="../assets/images/car1.jpg"  class="img-responsive adImg" alt="car1" style="width: 100%;height: 228px;">
+
     </div>
   </div>
 </div>
-<div class="container">
+
+
   <router-outlet></router-outlet>
 
 
 
-</div>
-<div class="footer row">
-  <div class="col-sm-3">
-    <ul>
-      <li class="footer-heading"> Categories</li>
-      <li>Electronics</li>
-      <li>Fashion</li>
-      <li>Footwear</li>
-      <li>Books</li>
-    </ul>
+<footer class="footer-distributed" style="margin-top:10px;">
+
+  <div class="footer-left">
+
+    <div style="margin-top: 25px">
+      <p class="footer-company-name">Made by Pranav Kapoor &copy; 2018 </p>
+      <br>
+
+    </div>
+
   </div>
-  <div class="col-sm-3">
-    <ul>
-      <li class="footer-heading"> Useful Link</li>
-      <li>Contact Us</li>
-      <li>Track Orders</li>
-      <li>Cancellation</li>
-    </ul>
+
+  <div class="footer-center">
+
+    <div >
+
+      <p> <i class="fa  fa-map-marker"></i> Pranav Kapoor </p>
+    </div>
+
+
+
+
+    <div >
+      <i class="fa fa-phone"></i>
+      <p>9910476755</p>
+
+    </div>
+
+    <div>
+      <i class="fa fa-envelope"></i>
+      <p><a href="#">pranavkapoor99@gmail.com</a></p>
+    </div>
+
   </div>
-  <div class="col-sm-3">
-    <ul>
-      <li class="footer-heading">Social Networks</li>
-      <li><a href="#" class="fa fa-facebook"></a>
-        <a href="#" class="fa fa-twitter"></a>
-        <a href="#" class="fa fa-google"></a>
-        <a href="#" class="fa fa-linkedin"></a>
-      </li>
-    </ul>
+
+  <div class="footer-right">
+
+    <p class="footer-company-about">
+      <span>Our Mission</span>
+To provide best in class service around the globe.
+    </p>
+
+    <div class="footer-icons">
+
+      <a href="https://www.facebook.com/peropranav/"><i class="fab fa-facebook"></i></a>
+      <a href="https://twitter.com/peropranav"><i class="fab fa-twitter"></i></a>
+      <a href="https://www.instagram.com/peropranav/?hl=en"><i class="fab fa-instagram"></i></a>
+
+    </div>
+
   </div>
-  <div class="col-sm-3">
-    <ul>
-      <li class="footer-heading"> Features</li>
-      <li> Free Replacement</li>
-      <li> Get Free Home Delivery</li>
-      <li></li>
-    </ul>
-  </div>
-</div>
+
+</footer>
+
+
+
+
 </body>
+
 
 </html>

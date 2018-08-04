@@ -1,29 +1,66 @@
 import { Injectable } from '@angular/core';
-import {allData} from './mockData';
+import {HttpClient} from '@angular/common/http';
+import swal from 'sweetalert';
+import {port} from '../../../config';
 
 @Injectable({
   providedIn: 'root'
 })
 export class DataTravelService {
-
-  dataGlobal = allData ;
+  constructor(private HttpClients: HttpClient) {
+  }
+ flag = 0;
   cartItem = [] ;
-  constructor() { }
+  getSingleSelectedProductApi(category, id) {
+    console.log(id);
+    return this.HttpClients.get(`http://localhost:${port}/api/${category}/${id}`);
+  }
+   getDataFromServerElectronics(p) {
+    console.log(port);
+     return this.HttpClients.get(`http://localhost:${port}/api/electronics/${p}`);
+  }
+  getDataFromServerFashion(p) {
+    return this.HttpClients.get(`http://localhost:${port}/api/fashion/${p}`);
+  }
+  getDataFromServerBooks(p) {
+    return this.HttpClients.get(`http://localhost:${port}/api/books/${p}`);
+  }
+  getDataFromServerWatches(p) {
+    return this.HttpClients.get(`http://localhost:${port}/api/watches/${p}`);
+  }
+ addToCart(dataForCart) {
+    this.flag = 0;
+   swal('Added!', 'Item added to the cart', 'success');
 
- addToCart(id) {
-alert('added to cart')
-    for ( let i = 0; i < allData.length; i++ ) {
-      if ( allData[i].id === id ) {
-        this.cartItem.push(allData[i]);
-        break;
+  // alert('added to cart');
+if (this.cartItem.length === 0) {
+  console.log('very first item of cartItem array');
+  this.cartItem.push(dataForCart);
 
-      }
+} else {
+  for (let i = 0; i < this.cartItem.length; i++) {
+    console.log(this.cartItem[i]._id, dataForCart._id);
+    if (this.cartItem[i]._id === dataForCart._id) {
+      console.log('id matched for cart, incrementing quantity');
+      dataForCart.quantity++;
+      this.flag = 1;
+      break;
+    }
+  }
+  if (this.flag !== 1) {
+    console.log('first entry service');
+    this.cartItem.push(dataForCart);
+
+  }
+
     }
    console.log(this.cartItem);
-  }
+
+ }
+
   deleteFromCart(id) {
     for ( let i = 0; i < this.cartItem.length; i++ ) {
-      if ( this.cartItem[i].id === id ) {
+      if ( this.cartItem[i]._id === id ) {
         this.cartItem.splice(i, 1 ) ;
 
       }
@@ -36,3 +73,4 @@ alert('added to cart')
   }
 
 }
+
